@@ -91,9 +91,5 @@ a {
 
 .side-by-side {
     display: flex;
-
-    > *:not(:last-child) {
-        margin-right: $space * 10;
-    }
 }
 </style>
