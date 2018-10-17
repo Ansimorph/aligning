@@ -6,7 +6,7 @@
       <span class="icons__item"></span>
       <span class="icons__item"></span>
     </div>
-    <h1>Aligning<br />Development &<br />Design</h1>
+    <h1>Aligning Development & Design</h1>
     <div class="author">
       Björn Ganslandt<br />
       <a href="https://twitter.com/Ansimorph">@ansimorph</a>

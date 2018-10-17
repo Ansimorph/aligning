@@ -9,7 +9,7 @@
       </slide>
       <slide leave='fadeOut'>
         <div class="side-by-side">
-          <h1 class="solitary-headline">Design Gaps</h1>
+          <h1 class="solitary-headline">Gaps between Design and Specification</h1>
           <div class="horizontal-center">
             <browser-window></browser-window>
           </div>
@@ -48,6 +48,7 @@ h1 {
     font-size: $space * 10;
     font-weight: 400;
     margin: 0;
+    max-width: 10em;
 }
 
 h2 {
