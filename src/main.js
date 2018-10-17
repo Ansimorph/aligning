@@ -1,8 +1,9 @@
+import "animate.css";
+
 import Vue from "vue";
 import App from "./App.vue";
 
 import Eagle from "eagle.js";
-import "animate.css";
 
 import hljs from "highlight.js";
 import { Options } from "eagle.js";

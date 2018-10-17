@@ -15,14 +15,10 @@
 </template>
 
 <script>
-export default {
-    props: {
-        mouseNavigation: { default: false },
-    },
-};
+export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../variables.scss";
 @import url(../assets/fonts/material-design-iconic-font/css/material-design-iconic-font.css);
 
@@ -30,7 +26,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: $space * 80;
+    min-height: $space * 81.5;
 }
 
 .icons {

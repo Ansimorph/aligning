@@ -5,7 +5,15 @@
         <title-slide></title-slide>
       </slide>
       <slide leave='fadeOut'>
-        wer
+        <h1 class="solitary-headline">1. The Problem</h1>
+      </slide>
+      <slide leave='fadeOut'>
+        <div class="side-by-side">
+          <h1 class="solitary-headline">Design Gaps</h1>
+          <div class="horizontal-center">
+            <browser-window></browser-window>
+          </div>
+        </div>
       </slide>
     </div>
   </div>
@@ -14,10 +22,11 @@
 <script>
 import { Slideshow } from "eagle.js";
 import TitleSlide from "./slides/TitleSlide.vue";
+import BrowserWindow from "./components/BrowserWindow.vue";
 
 export default {
     name: "app",
-    components: { TitleSlide },
+    components: { TitleSlide, BrowserWindow },
     mixins: [Slideshow],
     props: {
         mouseNavigation: { default: false },
@@ -33,33 +42,12 @@ export default {
 <style lang="scss">
 @import "./assets/fonts/plex/css/ibm-plex.css";
 @import "./variables.scss";
-
-body {
-    margin: 0;
-}
-
-.eg-slideshow,
-.eg-slide {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    position: absolute;
-}
-
-.eg-slideshow {
-    background-color: $black;
-    font-family: "IBM Plex Serif", Helvetica, sans-serif;
-    color: $white;
-}
-
-.eg-slide {
-    margin-top: $space * 12;
-    margin-left: $space * 14;
-}
+@import "./base.scss";
 
 h1 {
     font-size: $space * 10;
     font-weight: 400;
+    margin: 0;
 }
 
 h2 {
@@ -68,6 +56,10 @@ h2 {
 
 h3 {
     font-size: $space * 4;
+}
+
+.solitary-headline {
+    margin-top: $space * 9;
 }
 
 a {
@@ -80,6 +72,27 @@ a {
 
     &:active {
         color: lighten($blue, 10%);
+    }
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.horizontal-center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.side-by-side {
+    display: flex;
+
+    > *:not(:last-child) {
+        margin-right: $space * 10;
     }
 }
 </style>

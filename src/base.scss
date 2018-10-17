@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.animated {
+    animation-duration: 0.2s;
+}
+
+.eg-slideshow,
+.eg-slide {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+}
+
+.eg-slideshow {
+    background-color: $black;
+    font-family: "IBM Plex Serif", Helvetica, sans-serif;
+    color: $white;
+}
+
+.eg-slide {
+    padding: ($space * 12) ($space * 14);
+}
+
+.eg-slide-content {
+    height: 100%;
+}
