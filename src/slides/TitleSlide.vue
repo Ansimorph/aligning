@@ -48,6 +48,6 @@ export default {};
     color: $blue;
     font-family: "IBM Plex Sans", Helvetica, sans-serif;
     line-height: 1.5;
-    font-size: $space * 4;
+    font-size: $h4size;
 }
 </style>

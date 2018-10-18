@@ -106,7 +106,7 @@ export default {
 .question-mark {
     height: 100%;
     text-align: center;
-    font-size: $space * 8;
+    font-size: $h2size;
     margin: ($space * 10) 0;
 }
 </style>

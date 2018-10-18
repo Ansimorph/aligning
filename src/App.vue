@@ -15,6 +15,9 @@
           </div>
         </div>
       </slide>
+      <slide leave='fadeOut'>
+        <pong></pong>
+      </slide>
     </div>
   </div>
 </template>
@@ -23,10 +26,11 @@
 import { Slideshow } from "eagle.js";
 import TitleSlide from "./slides/TitleSlide.vue";
 import BrowserWindow from "./components/BrowserWindow.vue";
+import Pong from "./components/Pong.vue";
 
 export default {
     name: "app",
-    components: { TitleSlide, BrowserWindow },
+    components: { TitleSlide, BrowserWindow, Pong },
     mixins: [Slideshow],
     props: {
         mouseNavigation: { default: false },
@@ -44,19 +48,25 @@ export default {
 @import "./variables.scss";
 @import "./base.scss";
 
-h1 {
-    font-size: $space * 10;
+h1,
+h2,
+h3 {
     font-weight: 400;
+}
+
+h1 {
+    font-size: $h1size;
+
     margin: 0;
     max-width: 10em;
 }
 
 h2 {
-    font-size: $space * 6;
+    font-size: $h2size;
 }
 
 h3 {
-    font-size: $space * 4;
+    font-size: $h3size;
 }
 
 .solitary-headline {
