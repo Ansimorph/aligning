@@ -13,7 +13,7 @@
 export default {
     data() {
         return {
-            inertia: 3,
+            inertia: 8,
             inertiaX: undefined,
             inertiaY: undefined,
             canvasWidth: undefined,
@@ -209,6 +209,8 @@ export default {
     background-color: $white;
     color: $black;
     font-size: $h3size;
+    transition: transform 10ms;
+    will-change: transition;
 }
 
 .ball {
