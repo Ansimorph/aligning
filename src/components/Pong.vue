@@ -1,6 +1,8 @@
 <template>
   <div class="pong">
-    <div class="net"></div>
+    <div class="net">
+      <div class="net__label">Jira</div>
+    </div>
     <div class="pad pad--left" :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
     <div class="pad pad--right" :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}">Designer</div>
     <div class="ball" :style="{transform: `translate(${ballX}px, ${ballY}px)`}"></div>
@@ -182,6 +184,16 @@ export default {
         $black ($space * 3),
         $black ($space * 6.1)
     );
+}
+
+.net__label {
+    position: absolute;
+    padding-left: $space * 4;
+    bottom: $space * 4;
+    color: $blue;
+    font-family: $sans;
+    font-size: $h3size;
+    text-transform: uppercase;
 }
 
 .pad {

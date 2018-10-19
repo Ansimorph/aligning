@@ -46,7 +46,7 @@ export default {};
 
 .author {
     color: $blue;
-    font-family: "IBM Plex Sans", Helvetica, sans-serif;
+    font-family: $sans;
     line-height: 1.5;
     font-size: $h4size;
 }
