@@ -18,6 +18,16 @@
       <slide leave='fadeOut'>
         <pong></pong>
       </slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">2. The Solution</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">A better Jira?</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">A better Photoshop?</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">Design Systems?</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">Individuals and interactions over processes and tools
+</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">Talk early talk often</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">3. Implications</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter</h1></slide>
     </div>
   </div>
 </template>
