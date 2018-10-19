@@ -11,7 +11,7 @@
 export default {
     data() {
         return {
-            inertia: 1,
+            inertia: 3,
             inertiaX: undefined,
             inertiaY: undefined,
             canvasWidth: undefined,
@@ -122,11 +122,30 @@ export default {
             }
         },
         updatePads() {
-            this.padLeftY = this.clampedPadPosition(this.padLeftHeight);
-            this.padRightY = this.clampedPadPosition(this.padRightHeight);
+            if (
+                Math.abs(this.ballX - this.padLeftX) < this.canvasWidth * 0.4 &&
+                this.inertiaX < 0
+            ) {
+                this.padLeftY = this.clampedPadPosition(
+                    this.padLeftHeight,
+                    this.padLeftY,
+                );
+            }
+
+            if (
+                Math.abs(this.ballX - this.padRightX) <
+                    this.canvasWidth * 0.4 &&
+                this.inertiaX > 0
+            ) {
+                this.padRightY = this.clampedPadPosition(
+                    this.padRightHeight,
+                    this.padRightY,
+                );
+            }
         },
-        clampedPadPosition(paddleHeight) {
-            const position = this.ballY - paddleHeight / 2;
+        clampedPadPosition(paddleHeight, currentPos) {
+            const endPosition = this.ballY - paddleHeight / 2;
+            const position = currentPos + (endPosition - currentPos) * 0.08;
             const bottomClamped = Math.max(position, 0);
             return Math.min(bottomClamped, this.canvasHeight - paddleHeight);
         },
