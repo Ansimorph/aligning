@@ -122,31 +122,43 @@ export default {
             }
         },
         updatePads() {
-            if (
-                Math.abs(this.ballX - this.padLeftX) < this.canvasWidth * 0.4 &&
-                this.inertiaX < 0
-            ) {
-                this.padLeftY = this.clampedPadPosition(
-                    this.padLeftHeight,
-                    this.padLeftY,
-                );
+            const leftDistance = Math.abs(this.ballX - this.padLeftX);
+            const rightDistance = Math.abs(this.ballX - this.padRightX);
+
+            const headedLeft = this.inertiaX < 0;
+
+            this.padLeftY = this.clampedPadPosition(
+                this.padLeftHeight,
+                this.padLeftY,
+                leftDistance,
+                headedLeft,
+            );
+
+            this.padRightY = this.clampedPadPosition(
+                this.padRightHeight,
+                this.padRightY,
+                rightDistance,
+                !headedLeft,
+            );
+        },
+        clampedPadPosition(paddleHeight, currentPos, distance, headedToMe) {
+            let jitter = (Math.random() - 0.5) * (this.canvasHeight / 20);
+            let throttlingFactor = 0;
+
+            if (headedToMe && distance <= this.canvasWidth * 0.3) {
+                throttlingFactor = 0.08;
+            } else if (headedToMe && distance <= this.canvasWidth * 0.4) {
+                throttlingFactor = 0.008;
+            } else {
+                throttlingFactor = 0.0006;
+                jitter = (Math.random() - 0.5) * (this.canvasHeight / 4);
             }
 
-            if (
-                Math.abs(this.ballX - this.padRightX) <
-                    this.canvasWidth * 0.4 &&
-                this.inertiaX > 0
-            ) {
-                this.padRightY = this.clampedPadPosition(
-                    this.padRightHeight,
-                    this.padRightY,
-                );
-            }
-        },
-        clampedPadPosition(paddleHeight, currentPos) {
-            const endPosition = this.ballY - paddleHeight / 2;
-            const position = currentPos + (endPosition - currentPos) * 0.08;
+            const endPosition = this.ballY - paddleHeight / 2 - jitter;
+            const position =
+                currentPos + (endPosition - currentPos) * throttlingFactor;
             const bottomClamped = Math.max(position, 0);
+
             return Math.min(bottomClamped, this.canvasHeight - paddleHeight);
         },
     },
