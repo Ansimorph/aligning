@@ -1,7 +1,7 @@
 <template>
   <div class="pong">
     <div class="net"></div>
-    <div class="pad pad--left" :style="{transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
+    <div class="pad pad--left" :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
     <div class="pad pad--right" :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}">Designer</div>
     <div class="ball" :style="{transform: `translate(${ballX}px, ${ballY}px)`}"></div>
   </div>
@@ -21,8 +21,10 @@ export default {
             padWidth: undefined,
             padLeftX: undefined,
             padLeftY: undefined,
+            padLeftHeight: undefined,
             padRightX: undefined,
             padRightY: undefined,
+            padRightHeight: undefined,
             ballDiameter: undefined,
             ballX: undefined,
             ballY: undefined,
@@ -54,9 +56,9 @@ export default {
                 .getElementsByClassName("ball")[0]
                 .getBoundingClientRect();
 
-            // const padRightDimensions = document
-            //     .getElementsByClassName("pad--right")[0]
-            //     .getBoundingClientRect();
+            const padRightDimensions = document
+                .getElementsByClassName("pad--right")[0]
+                .getBoundingClientRect();
 
             this.canvasWidth = slideDimensions.width;
             this.canvasHeight = slideDimensions.height;
@@ -66,10 +68,12 @@ export default {
             this.padWidth = padLeftDimensions.height;
 
             this.padLeftX = this.padding;
-            this.padLeftY = this.padWidth + this.padding;
+            this.padLeftY = this.padding;
+            this.padLeftHeight = padLeftDimensions.width;
 
             this.padRightX = this.canvasWidth - this.padding;
             this.padRightY = this.padding;
+            this.padRightHeight = padRightDimensions.width;
 
             this.ballDiameter = ballDimensions.width;
 
@@ -91,15 +95,16 @@ export default {
         },
         gameLoop(tFrame) {
             this.rafID = window.requestAnimationFrame(this.gameLoop);
-            this.update(tFrame);
+            this.updateBall(tFrame);
+            this.updatePads(tFrame);
         },
-        update() {
+        updateBall() {
             this.ballX += this.inertiaX;
             this.ballY += this.inertiaY;
 
             if (
                 this.ballX + this.ballDiameter >=
-                this.canvasWidth - this.padWidth - this.padWidth
+                this.canvasWidth - this.padWidth - this.padding
             ) {
                 this.inertiaX *= -1;
             }
@@ -115,6 +120,15 @@ export default {
             if (this.ballY <= 0) {
                 this.inertiaY *= -1;
             }
+        },
+        updatePads() {
+            this.padLeftY = this.clampedPadPosition(this.padLeftHeight);
+            this.padRightY = this.clampedPadPosition(this.padRightHeight);
+        },
+        clampedPadPosition(paddleHeight) {
+            const position = this.ballY - paddleHeight / 2;
+            const bottomClamped = Math.max(position, 0);
+            return Math.min(bottomClamped, this.canvasHeight - paddleHeight);
         },
     },
 };
