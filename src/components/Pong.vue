@@ -209,7 +209,6 @@ export default {
     background-color: $white;
     color: $black;
     font-size: $h3size;
-    transition: transform 10ms;
     will-change: transition;
 }
 
