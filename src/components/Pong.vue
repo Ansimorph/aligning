@@ -31,6 +31,7 @@ export default {
             ballX: undefined,
             ballY: undefined,
             rafID: undefined,
+            lastTime: 0,
         };
     },
     mounted: function() {
@@ -97,12 +98,19 @@ export default {
         },
         gameLoop(tFrame) {
             this.rafID = window.requestAnimationFrame(this.gameLoop);
-            this.updateBall(tFrame);
-            this.updatePads(tFrame);
+
+            const timeDifference = tFrame - this.lastTime;
+
+            this.updateBall(timeDifference);
+            this.updatePads(timeDifference);
+
+            this.lastTime = tFrame;
         },
-        updateBall() {
-            this.ballX += this.inertiaX;
-            this.ballY += this.inertiaY;
+        updateBall(timeDifference) {
+            if (timeDifference >= 16) {
+                this.ballX += this.inertiaX * (timeDifference / 16);
+                this.ballY += this.inertiaY * (timeDifference / 16);
+            }
 
             if (
                 this.ballX + this.ballDiameter >=
