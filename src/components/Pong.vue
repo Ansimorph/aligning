@@ -11,25 +11,32 @@
 export default {
     data() {
         return {
-            inertia: 0.001,
-            inertiaX: 0,
-            inertiaY: 0,
-            canvasWidth: 0,
-            canvasHeight: 0,
-            padding: 10,
-            padWidth: 0,
-            padLeftX: 0,
-            padLeftY: 0,
-            padRightX: 0,
-            padRightY: 0,
-            ballDiameter: 0,
-            ballX: 0,
-            ballY: 0,
+            inertia: 1,
+            inertiaX: undefined,
+            inertiaY: undefined,
+            canvasWidth: undefined,
+            canvasHeight: undefined,
+            paddingPercent: 2,
+            padding: undefined,
+            padWidth: undefined,
+            padLeftX: undefined,
+            padLeftY: undefined,
+            padRightX: undefined,
+            padRightY: undefined,
+            ballDiameter: undefined,
+            ballX: undefined,
+            ballY: undefined,
+            rafID: undefined,
         };
     },
     mounted: function() {
         this.init();
         this.gameLoop();
+        window.addEventListener("resize", this.init);
+    },
+    beforeDestroy: function() {
+        window.removeEventListener("resize", this.init);
+        window.cancelAnimationFrame(this.rafID);
     },
     computed: {},
     directives: {},
@@ -54,6 +61,8 @@ export default {
             this.canvasWidth = slideDimensions.width;
             this.canvasHeight = slideDimensions.height;
 
+            this.padding = this.canvasWidth * (this.paddingPercent / 100);
+
             this.padWidth = padLeftDimensions.height;
 
             this.padLeftX = this.padding;
@@ -64,18 +73,48 @@ export default {
 
             this.ballDiameter = ballDimensions.width;
 
-            this.ballX = slideDimensions.width / 2 - this.ballDiameter / 2;
-            this.ballY = slideDimensions.height / 2 - this.ballDiameter / 2;
+            if (this.ballX === undefined) {
+                this.ballX = slideDimensions.width / 2 - this.ballDiameter / 2;
+            }
 
-            this.inertiaX = this.inertia;
-            this.inertiaY = this.inertia;
+            if (this.ballY === undefined) {
+                this.ballY = slideDimensions.height / 2 - this.ballDiameter / 2;
+            }
+
+            if (this.inertiaX === undefined) {
+                this.inertiaX = this.inertia;
+            }
+
+            if (this.inertiaY === undefined) {
+                this.inertiaY = this.inertia;
+            }
         },
         gameLoop(tFrame) {
-            window.requestAnimationFrame(this.gameLoop);
+            this.rafID = window.requestAnimationFrame(this.gameLoop);
             this.update(tFrame);
         },
         update() {
             this.ballX += this.inertiaX;
+            this.ballY += this.inertiaY;
+
+            if (
+                this.ballX + this.ballDiameter >=
+                this.canvasWidth - this.padWidth - this.padWidth
+            ) {
+                this.inertiaX *= -1;
+            }
+
+            if (this.ballX <= this.padding + this.padWidth) {
+                this.inertiaX *= -1;
+            }
+
+            if (this.ballY + this.ballDiameter >= this.canvasHeight) {
+                this.inertiaY *= -1;
+            }
+
+            if (this.ballY <= 0) {
+                this.inertiaY *= -1;
+            }
         },
     },
 };
