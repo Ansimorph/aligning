@@ -21,10 +21,23 @@
       <slide leave='fadeOut'><h1 class="solitary-headline">2. The Solution</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">A better Jira?</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">A better Photoshop?</h1></slide>
+      <slide leave='fadeOut'>
+        <h1 class="fullsize-headline">Every design tool matching the web platform in expressiveness will also match it in complexity
+        </h1>
+      </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">Design Systems?</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">Individuals and interactions over processes and tools
+      <slide leave='fadeOut'><h1 class="fullsize-headline">Individuals and interactions over processes and tools
 </h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">Talk early talk often</h1></slide>
+      <slide leave='fadeOut'>
+        <h1 class="solitary-headline">Talk early talk often</h1>
+        <h3>Discuss Tradeoffs before they mean discarding high fidelity work</h3>
+        <h3>Make tweaks together before they feel like criticism</h3>
+        <h3>Build up respect for each others craft</h3>
+      </slide>
+      <slide leave='fadeOut'>
+        <h1 class="solitary-headline">High fidelity is for browsers</h1>
+        <h1 class="solitary-headline">Ideation belongs in sketch</h1>
+      </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">3. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter</h1></slide>
@@ -66,7 +79,6 @@ h3 {
 
 h1 {
     font-size: $h1size;
-
     margin: 0;
     max-width: 10em;
 }
@@ -81,6 +93,12 @@ h3 {
 
 .solitary-headline {
     margin-top: $space * 9;
+}
+
+.fullsize-headline {
+    margin-top: $space * 8.5;
+    max-width: 28ch;
+    line-height: 1.5;
 }
 
 a {
