@@ -33,7 +33,7 @@
       </slide>
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Talk early talk often</h1>
-        <h3>Discuss Tradeoffs before they mean discarding high fidelity work</h3>
+        <h3>Discuss Tradeoffs before they mean discarding designs</h3>
         <h3>Make tweaks together before they feel like criticism</h3>
         <h3>Build up respect for each others craft</h3>
       </slide>
