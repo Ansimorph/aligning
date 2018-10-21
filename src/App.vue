@@ -35,11 +35,13 @@
         <h1 class="solitary-headline">Talk early talk often</h1>
         <h3>Discuss Tradeoffs before they mean discarding designs</h3>
         <h3>Make tweaks together before they feel like criticism</h3>
+        <h3>Learn to pair</h3>
         <h3>Build up respect for each others craft</h3>
       </slide>
       <slide leave='fadeOut'>
-        <h1 class="solitary-headline">High fidelity is for browsers</h1>
-        <h1 class="solitary-headline">Ideation belongs in sketch</h1>
+        <h1 class="solitary-headline">Use the right tool</h1>
+        <h3>High fidelity is for browsers</h3>
+        <h3>Ideation belongs in sketch</h3>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>
