@@ -26,8 +26,11 @@
         </h1>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">Design Systems?</h1></slide>
-      <slide leave='fadeOut'><h1 class="fullsize-headline">Individuals and interactions over processes and tools
-</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">3. The Real Solution</h1></slide>
+      <slide leave='fadeOut'>
+        <h1 class="solitary-headline">Don't improve the handoff – replace it
+        </h1>
+      </slide>
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Talk early talk often</h1>
         <h3>Discuss Tradeoffs before they mean discarding high fidelity work</h3>
@@ -38,7 +41,7 @@
         <h1 class="solitary-headline">High fidelity is for browsers</h1>
         <h1 class="solitary-headline">Ideation belongs in sketch</h1>
       </slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">3. Implications</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter</h1></slide>
     </div>
@@ -79,6 +82,7 @@ h3 {
 
 h1 {
     font-size: $h1size;
+    line-height: $space * 7;
     margin: 0;
     max-width: 10em;
 }
@@ -97,8 +101,8 @@ h3 {
 
 .fullsize-headline {
     margin-top: $space * 8.5;
+    line-height: $space * 8;
     max-width: 28ch;
-    line-height: 1.5;
 }
 
 a {
