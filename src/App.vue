@@ -19,7 +19,15 @@
         <pong></pong>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">2. The Solution</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">A better Jira?</h1></slide>
+      <slide :steps="2" leave='fadeOut'>
+        <div class="side-by-side">
+          <div>
+            <h1 class="solitary-headline">A better Jira?</h1>
+            <p class="h2size" v-if="step >= 2">No</p>
+          </div>
+          <img class="jira-image" src="./assets/images/jira.png" />
+        </div>
+      </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">A better Photoshop?</h1></slide>
       <slide leave='fadeOut'>
         <h1 class="fullsize-headline">Every design tool matching the web platform in expressiveness will also match it in complexity
@@ -89,11 +97,13 @@ h1 {
     max-width: 10em;
 }
 
-h2 {
+h2,
+.h2size {
     font-size: $h2size;
 }
 
-h3 {
+h3,
+.h3size {
     font-size: $h3size;
 }
 
@@ -103,6 +113,9 @@ h3 {
 
 .fullsize-headline {
     margin-top: $space * 8.5;
+    padding-left: $space * 3;
+    margin-left: auto;
+    margin-right: auto;
     line-height: $space * 8;
     max-width: 28ch;
 }
@@ -135,5 +148,17 @@ a {
 
 .side-by-side {
     display: flex;
+
+    > :first-child {
+        width: 50%;
+        flex-shrink: 0;
+    }
+}
+
+// Very slide-specifc stuff
+
+.jira-image {
+    height: 150vh;
+    max-height: 1426px;
 }
 </style>
