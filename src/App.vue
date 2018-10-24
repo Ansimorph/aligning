@@ -28,12 +28,28 @@
           <img class="jira-image" src="./assets/images/jira.png" />
         </div>
       </slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">A better Photoshop?</h1></slide>
+      <slide :steps="2" leave='fadeOut'>
+        <div class="side-by-side">
+          <div>
+            <h1 class="solitary-headline">A better Photoshop?</h1>
+            <p class="h2size" v-if="step >= 2">Maybe</p>
+          </div>
+          <img class="photoshop-image" src="./assets/images/photoshop.png" />
+        </div>
+      </slide>
       <slide leave='fadeOut'>
         <h1 class="fullsize-headline">Every design tool matching the web platform in expressiveness will also match it in complexity
         </h1>
       </slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">Design Systems?</h1></slide>
+      <slide :steps="2" leave='fadeOut'>
+        <div class="side-by-side">
+          <div>
+            <h1 class="solitary-headline">Design Systems?</h1>
+            <p class="h2size" v-if="step >= 2">Only if they establish a common language for designers and developers</p>
+          </div>
+          <img class="ds-image" src="./assets/images/designsystem.png" />
+        </div>
+      </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">3. The Real Solution</h1></slide>
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Don't improve the handoff – replace it
@@ -151,6 +167,7 @@ a {
 
     > :first-child {
         width: 50%;
+        padding-right: $space * 15;
         flex-shrink: 0;
     }
 }
@@ -160,5 +177,15 @@ a {
 .jira-image {
     height: 150vh;
     max-height: 1426px;
+}
+
+.photoshop-image {
+    height: 150vh;
+    max-height: 1890px;
+}
+
+.ds-image {
+    height: 100vh;
+    max-height: 1246px;
 }
 </style>
