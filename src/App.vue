@@ -55,12 +55,11 @@
         <h1 class="solitary-headline">Don't improve the handoff – replace it
         </h1>
       </slide>
-      <slide leave='fadeOut'>
-        <h1 class="solitary-headline">Talk early talk often</h1>
-        <h3>Discuss Tradeoffs before they mean discarding designs</h3>
-        <h3>Make tweaks together before they feel like criticism</h3>
-        <h3>Learn to pair</h3>
-        <h3>Build up respect for each others craft</h3>
+      <slide leave='fadeOut' :steps="5">
+        <div class="side-by-side">
+          <h1 class="solitary-headline">Talk early<br/>talk often</h1>
+          <chat :step="step"></chat>
+        </div>
       </slide>
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Use the right tool</h1>
@@ -79,10 +78,11 @@ import { Slideshow } from "eagle.js";
 import TitleSlide from "./slides/TitleSlide.vue";
 import BrowserWindow from "./components/BrowserWindow.vue";
 import Pong from "./components/Pong.vue";
+import Chat from "./components/Chat.vue";
 
 export default {
     name: "app",
-    components: { TitleSlide, BrowserWindow, Pong },
+    components: { TitleSlide, BrowserWindow, Pong, Chat },
     mixins: [Slideshow],
     props: {
         mouseNavigation: { default: false },
