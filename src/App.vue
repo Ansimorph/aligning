@@ -52,19 +52,24 @@
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">3. The Real Solution</h1></slide>
       <slide leave='fadeOut'>
-        <h1 class="solitary-headline">Don't improve the handoff – replace it
+        <h1 class="solitary-headline">
+          Don't improve the handoff – abandon it
         </h1>
       </slide>
-      <slide leave='fadeOut' :steps="5">
+      <slide leave='fadeOut' :steps="3">
         <div class="side-by-side">
-          <h1 class="solitary-headline">Talk early<br/>talk often</h1>
+          <h1 class="solitary-headline">Talk early</h1>
           <chat :step="step"></chat>
         </div>
       </slide>
       <slide leave='fadeOut'>
-        <h1 class="solitary-headline">Use the right tool</h1>
-        <h3>High fidelity is for browsers</h3>
-        <h3>Ideation belongs in sketch</h3>
+        <h1 class="solitary-headline">Code early</h1>
+        High fidelity is for browsers<br>
+        Make tweaks together before they feel like criticism<br>
+        Learn to pair
+      </slide>
+      <slide leave='fadeOut'>
+        <h1 class="solitary-headline">Build up respect for each others craft</h1>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>

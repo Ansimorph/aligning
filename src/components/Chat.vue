@@ -13,10 +13,8 @@ export default {
     data() {
         return {
             chatBubbles: [
-                "Discuss Tradeoffs before they mean discarding designs",
-                "Make tweaks together before they feel like criticism",
-                "Learn to pair",
-                "Build up respect for each others craft",
+                "Ideate in your favourite design tool",
+                "Discuss Tradeoffs before they mean discarding high fidelity designs",
             ],
         };
     },
