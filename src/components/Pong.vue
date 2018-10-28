@@ -1,7 +1,12 @@
 <template>
   <div class="pong">
+    <h1 class="headline">What's keeping us apart?</h1>
     <div class="net">
-      <div class="net__label">Jira</div>
+      <div class="net__label">
+        <span v-if="step === 2">Jira</span>
+        <span v-if="step === 3">Protected Sprints</span>
+        <span v-if="step === 4">Overloaded Designers</span>
+      </div>
     </div>
     <div class="pad pad--left" :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
     <div class="pad pad--right" :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}">Designer</div>
@@ -34,6 +39,7 @@ export default {
             lastTime: 0,
         };
     },
+    props: ["step"],
     mounted: function() {
         this.init();
         this.gameLoop();
@@ -178,6 +184,12 @@ export default {
 <style lang="scss" scoped>
 @import "../variables.scss";
 
+.headline {
+    position: absolute;
+    left: $space * 18;
+    font-size: $h2size;
+}
+
 .net {
     position: absolute;
     left: 50%;
@@ -196,12 +208,10 @@ export default {
 
 .net__label {
     position: absolute;
-    padding-left: $space * 4;
+    padding-left: $space * 6;
     bottom: $space * 4;
     color: $blue;
-    font-family: $sans;
-    font-size: $h3size;
-    text-transform: uppercase;
+    font-size: $h2size;
 }
 
 .pad {

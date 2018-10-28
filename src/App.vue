@@ -15,8 +15,8 @@
           </div>
         </div>
       </slide>
-      <slide leave='fadeOut'>
-        <pong></pong>
+      <slide leave='fadeOut' :steps="4">
+        <pong :step="step"></pong>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">2. The Solution</h1></slide>
       <slide :steps="2" leave='fadeOut'>
