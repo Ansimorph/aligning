@@ -22,7 +22,7 @@
       <slide :steps="2" leave='fadeOut'>
         <div class="side-by-side">
           <div>
-            <h1 class="solitary-headline">A better Jira?</h1>
+            <h1 class="solitary-headline margin-medium">A better Jira?</h1>
             <p class="h2size" v-if="step >= 2">No</p>
           </div>
           <img class="jira-image" src="./assets/images/jira.png" />
@@ -31,7 +31,7 @@
       <slide :steps="2" leave='fadeOut'>
         <div class="side-by-side">
           <div>
-            <h1 class="solitary-headline">A better Photoshop?</h1>
+            <h1 class="solitary-headline margin-medium">A better Photoshop?</h1>
             <p class="h2size" v-if="step >= 2">Maybe</p>
           </div>
           <img class="photoshop-image" src="./assets/images/photoshop.png" />
@@ -44,7 +44,7 @@
       <slide :steps="2" leave='fadeOut'>
         <div class="side-by-side">
           <div>
-            <h1 class="solitary-headline">Design Systems?</h1>
+            <h1 class="solitary-headline margin-medium">Design Systems?</h1>
             <p class="h2size" v-if="step >= 2">Only if they establish a common language for designers and developers</p>
           </div>
           <img class="ds-image" src="./assets/images/designsystem.png" />
@@ -76,7 +76,16 @@
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation better results</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter, Look at the slides</h1></slide>
+      <slide leave='fadeOut'>
+        <div class="credits">
+          <p class="h2size margin-small">Follow Me On Twitter:</p>
+          <p class="margin-large">
+            <a class="h3size" href="https://twitter.com/Ansimorph">@ansimorph</a>
+          </p>
+          <p class="h2size margin-small">Get the slides:</p>
+          <a class="h3size" href="https://github.com/Ansimorph/align/">https://github.com/Ansimorph/align/</a>
+        </div>
+      </slide>
     </div>
   </div>
 </template>
@@ -158,6 +167,23 @@ a {
     }
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: $space;
+}
+
+.margin-small {
+    margin-bottom: $space * 2;
+}
+
+.margin-medium {
+    margin-bottom: $space * 4;
+}
+
+.margin-large {
+    margin-bottom: $space * 12;
+}
+
 .vertical-center {
     display: flex;
     flex-direction: column;
@@ -207,5 +233,9 @@ a {
 .ds-image {
     height: 100vh;
     max-height: 1246px;
+}
+
+.credits {
+    margin-top: $space * 20;
 }
 </style>
