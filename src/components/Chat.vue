@@ -14,7 +14,7 @@ export default {
         return {
             chatBubbles: [
                 "Ideate in your favourite design tool",
-                "Discuss Tradeoffs before they mean discarding high fidelity designs",
+                "Discuss tradeoffs before they mean discarding high fidelity designs",
             ],
         };
     },
