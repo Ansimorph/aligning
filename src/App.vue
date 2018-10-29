@@ -75,7 +75,11 @@
         <h1 class="solitary-headline">Because unicorns don't scale</h1>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation better results</h1></slide>
+      <slide leave='fadeOut'>
+        <div class="side-by-side">
+          <h1 class="solitary-headline">A workflow relying on trust</h1>
+        </div>
+      </slide>
       <slide leave='fadeOut'>
         <div class="credits">
           <p class="h2size margin-small">Follow Me On Twitter:</p>
@@ -129,6 +133,7 @@ h1 {
     line-height: $space * 7;
     margin: 0;
     max-width: 10em;
+    text-transform: capitalize;
 }
 
 h2,
