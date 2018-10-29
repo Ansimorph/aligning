@@ -37,10 +37,10 @@
           <img class="photoshop-image" src="./assets/images/photoshop.png" />
         </div>
       </slide>
-      <slide leave='fadeOut'>
+      <!-- <slide leave='fadeOut'>
         <h1 class="fullsize-headline">Every design tool matching the web platform in expressiveness will also match it in complexity
         </h1>
-      </slide>
+      </slide> -->
       <slide :steps="2" leave='fadeOut'>
         <div class="side-by-side">
           <div>
