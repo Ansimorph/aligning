@@ -15,7 +15,7 @@
           </div>
         </div>
       </slide>
-      <slide leave='fadeOut' :steps="4">
+      <slide leave='fadeOut' :steps="4  ">
         <pong :step="step"></pong>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">2. The Solution</h1></slide>
@@ -71,9 +71,12 @@
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Build up respect for each others craft</h1>
       </slide>
+      <slide leave='fadeOut'>
+        <h1 class="solitary-headline">Unicorns don't scale</h1>
+      </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation, more risk, better results</h1></slide>
-      <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation better results</h1></slide>
+      <slide leave='fadeOut'><h1 class="solitary-headline">Follow Me On Twitter, Look at the slides</h1></slide>
     </div>
   </div>
 </template>
