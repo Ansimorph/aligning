@@ -124,13 +124,17 @@ export default {
 
 h1,
 h2,
-h3 {
+h3,
+.h1size,
+.h2size,
+.h3size {
     font-weight: 400;
+    line-height: 1.1;
 }
 
-h1 {
+h1,
+.h1size {
     font-size: $h1size;
-    line-height: $space * 7;
     margin: 0;
     max-width: 10em;
     text-transform: capitalize;

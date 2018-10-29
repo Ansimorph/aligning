@@ -50,7 +50,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: $space * 87;
+    min-height: $space * 78;
 }
 
 .icons {
