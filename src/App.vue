@@ -62,11 +62,11 @@
           <chat :step="step"></chat>
         </div>
       </slide>
-      <slide leave='fadeOut'>
-        <h1 class="solitary-headline">Code early</h1>
-        High fidelity is for browsers<br>
-        Make tweaks together before they feel like criticism<br>
-        Learn to pair
+      <slide leave='fadeOut' :steps="4">
+        <div class="side-by-side">
+          <h1 class="solitary-headline">Code early</h1>
+          <codeComponent :step="step"></codeComponent>
+        </div>
       </slide>
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Build up respect for each others craft</h1>
@@ -87,10 +87,11 @@ import TitleSlide from "./slides/TitleSlide.vue";
 import BrowserWindow from "./components/BrowserWindow.vue";
 import Pong from "./components/Pong.vue";
 import Chat from "./components/Chat.vue";
+import codeComponent from "./components/codeComponent.vue";
 
 export default {
     name: "app",
-    components: { TitleSlide, BrowserWindow, Pong, Chat },
+    components: { TitleSlide, BrowserWindow, Pong, Chat, codeComponent },
     mixins: [Slideshow],
     props: {
         mouseNavigation: { default: false },
@@ -174,10 +175,25 @@ a {
     display: flex;
 
     > :first-child {
-        width: 50%;
         padding-right: $space * 15;
+    }
+
+    > :first-child,
+    :last-child {
+        width: 50%;
         flex-shrink: 0;
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.3s;
+    transform: translateY(0);
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(20%);
 }
 
 // Very slide-specifc stuff
