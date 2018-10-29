@@ -10,7 +10,6 @@
     "dependencies": {
         "animate.css": "^3.7.0",
         "eagle.js": "^0.4.0",
-        "highlight.js": "^9.12.0",
         "node-sass": "^4.9.4",
         "prismjs": "^1.15.0",
         "vue": "^2.5.17",
