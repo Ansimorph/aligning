@@ -42,7 +42,7 @@ pre[class*="language-"] {
     word-spacing: normal;
     word-break: normal;
     white-space: pre-wrap;
-    line-height: 1.5;
+    line-height: 1.3;
     tab-size: 4;
     hyphens: none;
 }

@@ -35,8 +35,9 @@ export default {
 .chat__bubble {
     background: $white;
     color: $black;
-    padding: ($space * 2) ($space * 4);
+    padding: ($space * 3) ($space * 4);
     font-size: $h3size;
+    line-height: 1.2;
     border-radius: $space * 2;
     max-width: 70%;
     clear: both;
