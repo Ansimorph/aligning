@@ -36,7 +36,7 @@ export default {
     background: $white;
     color: $black;
     padding: ($space * 2) ($space * 4);
-    font-size: $h4size;
+    font-size: $h3size;
     border-radius: $space * 2;
     max-width: 70%;
     clear: both;
