@@ -72,7 +72,7 @@
         <h1 class="solitary-headline">Build up respect for each others craft</h1>
       </slide>
       <slide leave='fadeOut'>
-        <h1 class="solitary-headline">Unicorns don't scale</h1>
+        <h1 class="solitary-headline">Because unicorns don't scale</h1>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">More trust, less documentation better results</h1></slide>

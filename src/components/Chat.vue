@@ -29,6 +29,7 @@ export default {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .chat__bubble {
