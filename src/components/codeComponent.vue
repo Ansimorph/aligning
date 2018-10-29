@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition-group name="fade">
-      <prism v-for="(line, index) in codeLines" v-if="step >= index + 2" :key="line">{{ line }}</prism>
+      <prism v-for="(line, index) in codeLines" v-if="step >= index + 2" :key="line" class="code-block">{{ line }}</prism>
     </transition-group>
   </div>
 </template>
@@ -143,5 +143,9 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+pre.code-block {
+    margin-bottom: $space * 6;
 }
 </style>

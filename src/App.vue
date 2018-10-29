@@ -176,12 +176,8 @@ a {
 
     > :first-child {
         padding-right: $space * 15;
-    }
-
-    > :first-child,
-    :last-child {
-        width: 50%;
         flex-shrink: 0;
+        width: 50%;
     }
 }
 
