@@ -1,12 +1,12 @@
 <template>
   <div class="pong">
-    <h1 class="headline">What's keeping us apart?</h1>
+    <h1 class="headline">What's keeping<br/>us apart?</h1>
     <div class="net">
-      <div class="net__label">
-        <span v-if="step === 2">Jira</span>
-        <span v-if="step === 3">Protected Sprints</span>
-        <span v-if="step === 4">Overloaded Designers</span>
-      </div>
+    </div>
+    <div class="subheadline">
+      <span v-if="step === 2">Jira</span>
+      <span v-if="step === 3">Protected Sprints</span>
+      <span v-if="step === 4">Overloaded Designers / Developers</span>
     </div>
     <div class="pad pad--left" :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
     <div class="pad pad--right" :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}">Designer</div>
@@ -184,10 +184,27 @@ export default {
 <style lang="scss" scoped>
 @import "../variables.scss";
 
-.headline {
+$horizontal-padding: $space * 8;
+$net-padding: $space * 8;
+
+.headline,
+.subheadline {
     position: absolute;
-    left: $space * 18;
+    top: $horizontal-padding;
     font-size: $h2size;
+    line-height: $line-height;
+    max-width: 35%;
+}
+
+.headline {
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.subheadline {
+    left: 50%;
+    padding-left: $net-padding;
+    color: $blue;
 }
 
 .net {
@@ -204,14 +221,6 @@ export default {
         $black ($space * 3),
         $black ($space * 6.1)
     );
-}
-
-.net__label {
-    position: absolute;
-    padding-left: $space * 6;
-    bottom: $space * 4;
-    color: $blue;
-    font-size: $h2size;
 }
 
 .pad {
