@@ -65,7 +65,7 @@
       <slide leave='fadeOut' :steps="4">
         <div class="side-by-side">
           <h1 class="solitary-headline">Code early</h1>
-          <codeComponent :step="step"></codeComponent>
+          <code-component :step="step"></code-component>
         </div>
       </slide>
       <slide leave='fadeOut'>
@@ -100,11 +100,11 @@ import TitleSlide from "./slides/TitleSlide.vue";
 import BrowserWindow from "./components/BrowserWindow.vue";
 import Pong from "./components/Pong.vue";
 import Chat from "./components/Chat.vue";
-import codeComponent from "./components/codeComponent.vue";
+import CodeComponent from "./components/CodeComponent.vue";
 
 export default {
     name: "app",
-    components: { TitleSlide, BrowserWindow, Pong, Chat, codeComponent },
+    components: { TitleSlide, BrowserWindow, Pong, Chat, CodeComponent },
     mixins: [Slideshow],
     props: {
         mouseNavigation: { default: false },
