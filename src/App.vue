@@ -9,7 +9,7 @@
       </slide>
       <slide leave='fadeOut'>
         <div class="side-by-side">
-          <h1 class="solitary-headline">Gaps between Design and Specification</h1>
+          <h1 class="solitary-headline">Gaps between Product and Specification</h1>
           <div class="horizontal-center">
             <browser-window></browser-window>
           </div>

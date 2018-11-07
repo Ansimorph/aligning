@@ -15,8 +15,8 @@ export default {
         return {
             codeLines: [
                 "<p>High fidelity is for browsers</p>",
-                "<p>Make tweaks together before they feel like criticism</p>",
                 "<p>Learn to pair</p>",
+                "<p>Make tweaks together before they feel like criticism</p>",
             ],
         };
     },
