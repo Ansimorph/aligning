@@ -1,6 +1,6 @@
 # Slides for »Aligning Development & Design«
 
-Current slides are live at aligning.netlify.com
+Current slides are live at [aligning.netlify.com](aligning.netlify.com)
 
 ## Setup
 
