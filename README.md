@@ -1,6 +1,6 @@
-# slides
+# Slides for »Aligning Development & Design«
 
-## Project setup
+## Setup
 
 ```
 npm install
