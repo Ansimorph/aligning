@@ -1,5 +1,7 @@
 # Slides for »Aligning Development & Design«
 
+Current slides are live at aligning.netlify.com
+
 ## Setup
 
 ```

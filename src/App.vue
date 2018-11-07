@@ -87,7 +87,7 @@
             <a class="h3size" href="https://twitter.com/Ansimorph">@ansimorph</a>
           </p>
           <p class="h2size margin-small">Get the slides:</p>
-          <a class="h3size" href="https://github.com/Ansimorph/align/">https://github.com/Ansimorph/align/</a>
+          <a class="h3size" href="https://github.com/Ansimorph/aligning/">https://github.com/Ansimorph/aligning/</a>
         </div>
       </slide>
     </div>
