@@ -71,7 +71,7 @@
       <slide leave='fadeOut'>
         <h1 class="solitary-headline">Build up respect for each others craft</h1>
       </slide>
-      <slide leave='fadeOut'>
+      <slide leave='fadeOut' class="unicorn">
         <h1 class="solitary-headline">Because unicorns don't scale</h1>
       </slide>
       <slide leave='fadeOut'><h1 class="solitary-headline">4. Implications</h1></slide>
@@ -228,6 +228,13 @@ p {
 }
 
 // Very slide-specifc stuff
+
+.unicorn {
+    background-image: url(./assets/images/unicorn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: luminosity;
+}
 
 .jira-image {
     height: 150vh;
