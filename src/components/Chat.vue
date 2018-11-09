@@ -1,9 +1,12 @@
 <template>
   <ul class="chat">
     <transition-group name="fade">
-      <li v-for="(bubble, index) in chatBubbles" v-if="step >= index + 2" :key="bubble" class="chat__bubble">
-        {{ bubble }}
-      </li>
+      <li
+        v-for="(bubble, index) in chatBubbles"
+        v-if="step >= index + 2"
+        :key="bubble"
+        class="chat__bubble"
+      >{{ bubble }}</li>
     </transition-group>
   </ul>
 </template>

@@ -1,7 +1,12 @@
 <template>
   <div>
     <transition-group name="fade">
-      <prism v-for="(line, index) in codeLines" v-if="step >= index + 2" :key="line" class="code-block">{{ line }}</prism>
+      <prism
+        v-for="(line, index) in codeLines"
+        v-if="step >= index + 2"
+        :key="line"
+        class="code-block"
+      >{{ line }}</prism>
     </transition-group>
   </div>
 </template>

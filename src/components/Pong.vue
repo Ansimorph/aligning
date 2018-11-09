@@ -1,15 +1,22 @@
 <template>
   <div class="pong">
-    <h1 class="headline">What's keeping<br/>us apart?</h1>
-    <div class="net">
-    </div>
+    <h1 class="headline">What's keeping
+      <br>us apart?
+    </h1>
+    <div class="net"></div>
     <div class="subheadline">
       <span v-if="step === 2">Jira</span>
       <span v-if="step === 3">Protected Sprints</span>
       <span v-if="step === 4">Overloaded Designers / Developers</span>
     </div>
-    <div class="pad pad--left" :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}">Developer</div>
-    <div class="pad pad--right" :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}">Designer</div>
+    <div
+      class="pad pad--left"
+      :style="{top: `${padLeftHeight}px`, transform: `translate(${padLeftX}px, ${padLeftY}px) rotate(-90deg)`}"
+    >Developer</div>
+    <div
+      class="pad pad--right"
+      :style="{transform: `translate(${padRightX}px, ${padRightY}px) rotate(90deg)`}"
+    >Designer</div>
     <div class="ball" :style="{transform: `translate(${ballX}px, ${ballY}px)`}"></div>
   </div>
 </template>
