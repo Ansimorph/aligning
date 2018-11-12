@@ -124,6 +124,21 @@ export default {
             baseUrl: process.env.BASE_URL,
         };
     },
+    mounted: function() {
+        window.addEventListener("keydown", this.extraKeyboardNav);
+    },
+    methods: {
+        // Also allow for naviagtion with up/down so that my presenter works
+        extraKeyboardNav: function(event) {
+            if (event.key === "ArrowUp") {
+                this.nextStep();
+                event.preventDefault();
+            } else if (event.key === "ArrowDown") {
+                this.previousStep();
+                event.preventDefault();
+            }
+        },
+    },
 };
 </script>
 
