@@ -97,7 +97,7 @@
           <a
             class="h3size"
             href="https://github.com/Ansimorph/aligning/"
-          >https://github.com/Ansimorph/aligning/</a>
+          >github.com/Ansimorph/aligning/</a>
         </div>
       </slide>
     </div>
