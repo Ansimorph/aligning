@@ -109,6 +109,7 @@ import BrowserWindow from "./components/BrowserWindow.vue";
 import Pong from "./components/Pong.vue";
 import Chat from "./components/Chat.vue";
 import CodeComponent from "./components/CodeComponent.vue";
+import Hammer from "hammerjs";
 
 export default {
     name: "app",
@@ -124,6 +125,14 @@ export default {
     },
     mounted: function() {
         window.addEventListener("keydown", this.extraKeyboardNav);
+
+        const hammer = new Hammer(window);
+        hammer.on("swiperight", () => {
+            this.previousStep();
+        });
+        hammer.on("swipeleft", () => {
+            this.nextStep();
+        });
     },
     methods: {
         // Also allow for naviagtion with up/down so that my presenter works
