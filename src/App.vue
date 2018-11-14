@@ -126,7 +126,7 @@ export default {
     mounted: function() {
         window.addEventListener("keydown", this.extraKeyboardNav);
 
-        const hammer = new Hammer(window);
+        const hammer = new Hammer(document.querySelector(".eg-slideshow"));
         hammer.on("swiperight", () => {
             this.previousStep();
         });
