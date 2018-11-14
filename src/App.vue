@@ -83,9 +83,7 @@
         <h1 class="solitary-headline">4. Implications</h1>
       </slide>
       <slide leave="fadeOut">
-        <div class="side-by-side">
-          <h1 class="solitary-headline">A workflow relying on trust</h1>
-        </div>
+        <h1 class="solitary-headline">A workflow relying on trust</h1>
       </slide>
       <slide leave="fadeOut">
         <div class="credits">
