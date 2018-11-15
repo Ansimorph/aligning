@@ -146,21 +146,6 @@ export default {
             }
         },
     },
-    metaInfo: {
-        meta: [
-            {
-                "twitter:title": "Aligning Development & Design",
-            },
-            {
-                "twitter:creator": "@Ansimorph",
-            },
-            {
-                "twitter:image": require("./assets/images/preview.png"),
-            },
-        ],
-
-        title: "Aligning Development & Design",
-    },
 };
 </script>
 
