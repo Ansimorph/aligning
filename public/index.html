@@ -4,18 +4,40 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Aligning Development & Design" />
+
+        <!--
+            Facebook OpenGraph developers.facebook.com/docs/reference/opengraph/
+        -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Aligning Development & Design" />
         <meta
-            name="twitter:image:alt"
-            content="Aligning Development & Design"
+            property="og:description"
+            content="Collaboration between designers and developers is one of the more persistent problems in product development. We’ll look at why turning designs into code is hard and how to make it easier without relying on unicorns or other mythical creatures."
         />
+        <meta property="og:url" content="https://aligning.netlify.com/" />
+        <meta property="og:image" content="<%= BASE_URL %>preview.png" />
+
+        <!--
+            Twitter domain approval dev.twitter.com/docs/cards/validation/validator
+        -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Ansimorph" />
+        <meta name="twitter:title" content="Aligning Development & Design" />
         <meta
             name="twitter:description"
             content="Collaboration between designers and developers is one of the more persistent problems in product development. We’ll look at why turning designs into code is hard and how to make it easier without relying on unicorns or other mythical creatures."
         />
-        <meta name="twitter:site" content="@Ansimorph" />
+        <meta name="twitter:url" content="https://aligning.netlify.com/" />
         <meta name="twitter:image" content="<%= BASE_URL %>preview.png" />
+
+        <!-- Shema.org microdata -->
+        <meta itemprop="name" content="Aligning Development & Design" />
+        <meta
+            itemprop="description"
+            content="Collaboration between designers and developers is one of the more persistent problems in product development. We’ll look at why turning designs into code is hard and how to make it easier without relying on unicorns or other mythical creatures."
+        />
+        <meta itemprop="image" content="<%= BASE_URL %>preview.png" />
+
         <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
         <title>Aligning Development & Design</title>
     </head>
