@@ -144,23 +144,27 @@ export default {
       // Right edge
       if (
         this.ballX + this.ballDiameter >=
-        this.canvasWidth - this.padWidth - this.padding
+          this.canvasWidth - this.padWidth - this.padding &&
+        this.inertiaX > 0
       ) {
         this.inertiaX *= -1;
       }
 
       // Left edge
-      if (this.ballX <= this.padding + this.padWidth) {
+      if (this.ballX <= this.padding + this.padWidth && this.inertiaX < 0) {
         this.inertiaX *= -1;
       }
 
       // Bottom edge
-      if (this.ballY + this.ballDiameter >= this.canvasHeight) {
+      if (
+        this.ballY + this.ballDiameter >= this.canvasHeight &&
+        this.inertiaY > 0
+      ) {
         this.inertiaY *= -1;
       }
 
       // Top Edge
-      if (this.ballY <= 0) {
+      if (this.ballY <= 0 && this.inertiaY < 0) {
         this.inertiaY *= -1;
       }
     },
