@@ -112,40 +112,40 @@ import CodeComponent from "./components/CodeComponent.vue";
 import Hammer from "hammerjs";
 
 export default {
-    name: "app",
-    components: { TitleSlide, BrowserWindow, Pong, Chat, CodeComponent },
-    mixins: [Slideshow],
-    props: {
-        mouseNavigation: { default: false },
-    },
-    data: function() {
-        return {
-            baseUrl: process.env.BASE_URL,
-        };
-    },
-    mounted: function() {
-        window.addEventListener("keydown", this.extraKeyboardNav);
+  name: "app",
+  components: { TitleSlide, BrowserWindow, Pong, Chat, CodeComponent },
+  mixins: [Slideshow],
+  props: {
+    mouseNavigation: { default: false }
+  },
+  data: function() {
+    return {
+      baseUrl: process.env.BASE_URL
+    };
+  },
+  mounted: function() {
+    window.addEventListener("keydown", this.extraKeyboardNav);
 
-        const hammer = new Hammer(document.querySelector(".eg-slideshow"));
-        hammer.on("swiperight", () => {
-            this.previousStep();
-        });
-        hammer.on("swipeleft", () => {
-            this.nextStep();
-        });
-    },
-    methods: {
-        // Also allow for naviagtion with up/down so that my presenter works
-        extraKeyboardNav: function(event) {
-            if (event.key === "ArrowUp") {
-                this.nextStep();
-                event.preventDefault();
-            } else if (event.key === "ArrowDown") {
-                this.previousStep();
-                event.preventDefault();
-            }
-        },
-    },
+    const hammer = new Hammer(document.querySelector(".eg-slideshow"));
+    hammer.on("swiperight", () => {
+      this.previousStep();
+    });
+    hammer.on("swipeleft", () => {
+      this.nextStep();
+    });
+  },
+  methods: {
+    // Also allow for naviagtion with up/down so that my presenter works
+    extraKeyboardNav: function(event) {
+      if (event.key === "ArrowUp") {
+        this.nextStep();
+        event.preventDefault();
+      } else if (event.key === "ArrowDown") {
+        this.previousStep();
+        event.preventDefault();
+      }
+    }
+  }
 };
 </script>
 
@@ -160,130 +160,130 @@ h3,
 .h1size,
 .h2size,
 .h3size {
-    font-weight: 400;
-    line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 h1,
 .h1size {
-    font-size: $h1size;
-    margin: 0;
-    max-width: 10em;
-    text-transform: capitalize;
+  font-size: $h1size;
+  margin: 0;
+  max-width: 10em;
+  text-transform: capitalize;
 }
 
 h2,
 .h2size {
-    font-size: $h2size;
+  font-size: $h2size;
 }
 
 h3,
 .h3size {
-    font-size: $h3size;
+  font-size: $h3size;
 }
 
 .solitary-headline {
-    margin-top: $space * 9;
+  margin-top: $space * 9;
 }
 
 .fullsize-headline {
-    margin-top: $space * 8.5;
-    padding-left: $space * 3;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: $space * 8;
-    max-width: 28ch;
+  margin-top: $space * 8.5;
+  padding-left: $space * 3;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: $space * 8;
+  max-width: 28ch;
 }
 
 a {
-    color: $blue;
-    text-decoration: none;
+  color: $blue;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 
-    &:active {
-        color: lighten($blue, 10%);
-    }
+  &:active {
+    color: lighten($blue, 10%);
+  }
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: $space;
+  margin-top: 0;
+  margin-bottom: $space;
 }
 
 .margin-small {
-    margin-bottom: $space * 2;
+  margin-bottom: $space * 2;
 }
 
 .margin-medium {
-    margin-bottom: $space * 4;
+  margin-bottom: $space * 4;
 }
 
 .margin-large {
-    margin-bottom: $space * 12;
+  margin-bottom: $space * 12;
 }
 
 .vertical-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .horizontal-center {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .side-by-side {
-    display: flex;
+  display: flex;
 
-    > :first-child {
-        padding-right: $space * 15;
-        flex-shrink: 0;
-        width: 50%;
-    }
+  > :first-child {
+    padding-right: $space * 15;
+    flex-shrink: 0;
+    width: 50%;
+  }
 }
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 0.3s;
-    transform: translateY(0);
+  transition: all 0.3s;
+  transform: translateY(0);
 }
 .fade-enter,
 .fade-leave-to {
-    opacity: 0;
-    transform: translateY(20%);
+  opacity: 0;
+  transform: translateY(20%);
 }
 
 // Very slide-specifc stuff
 
 .unicorn {
-    background-image: url(./assets/images/unicorn.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    mix-blend-mode: luminosity;
+  background-image: url(./assets/images/unicorn.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
 }
 
 .jira-image {
-    height: 150vh;
-    max-height: 1426px;
+  height: 150vh;
+  max-height: 1426px;
 }
 
 .photoshop-image {
-    height: 150vh;
-    max-height: 1890px;
+  height: 150vh;
+  max-height: 1890px;
 }
 
 .ds-image {
-    height: 100vh;
-    max-height: 1246px;
+  height: 100vh;
+  max-height: 1246px;
 }
 
 .credits {
-    margin-top: $space * 20;
+  margin-top: $space * 20;
 }
 </style>

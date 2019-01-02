@@ -16,19 +16,19 @@ import "prismjs";
 import Prism from "vue-prism-component";
 
 export default {
-    data() {
-        return {
-            codeLines: [
-                "<p>High fidelity is for browsers</p>",
-                "<p>Learn to pair</p>",
-                "<p>Make tweaks together before they feel like criticism</p>",
-            ],
-        };
-    },
-    props: ["step"],
-    components: {
-        Prism,
-    },
+  data() {
+    return {
+      codeLines: [
+        "<p>High fidelity is for browsers</p>",
+        "<p>Learn to pair</p>",
+        "<p>Make tweaks together before they feel like criticism</p>"
+      ]
+    };
+  },
+  props: ["step"],
+  components: {
+    Prism
+  }
 };
 </script>
 
@@ -37,63 +37,63 @@ export default {
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: $white;
-    background: none;
-    font-family: "IBM Plex Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
-        monospace;
-    font-size: $h3size;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    white-space: pre-wrap;
-    line-height: 1.3;
-    tab-size: 4;
-    hyphens: none;
+  color: $white;
+  background: none;
+  font-family: "IBM Plex Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: $h3size;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  white-space: pre-wrap;
+  line-height: 1.3;
+  tab-size: 4;
+  hyphens: none;
 }
 
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #9aa2b1;
+  text-shadow: none;
+  background: #9aa2b1;
 }
 
 @media print {
-    code[class*="language-"],
-    pre[class*="language-"] {
-        text-shadow: none;
-    }
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
 }
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 0;
-    margin: 0;
-    overflow: auto;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-    white-space: normal;
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #5c6370;
+  color: #5c6370;
 }
 
 .token.punctuation {
-    color: #abb2bf;
+  color: #abb2bf;
 }
 
 .token.selector,
 .token.tag {
-    color: $red;
+  color: $red;
 }
 
 .token.property,
@@ -103,7 +103,7 @@ pre[class*="language-"] {
 .token.symbol,
 .token.attr-name,
 .token.deleted {
-    color: #d19a66;
+  color: #d19a66;
 }
 
 .token.string,
@@ -111,7 +111,7 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.builtin,
 .token.inserted {
-    color: #98c379;
+  color: #98c379;
 }
 
 .token.operator,
@@ -119,38 +119,38 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #56b6c2;
+  color: #56b6c2;
 }
 
 .token.atrule,
 .token.keyword {
-    color: $purple;
+  color: $purple;
 }
 
 .token.function {
-    color: $blue;
+  color: $blue;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: $purple;
+  color: $purple;
 }
 
 .token.important,
 .token.bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .token.italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .token.entity {
-    cursor: help;
+  cursor: help;
 }
 
 pre.code-block {
-    margin-bottom: $space * 6;
+  margin-bottom: $space * 6;
 }
 </style>
