@@ -2791,10 +2791,10 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-eagle.js@^0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/eagle.js/-/eagle.js-0.4.1.tgz#86d29513e7edf0eb9739e7ffe828e67425085230"
-  integrity sha512-TTPinDCbkvzL4qyq/DqCNqcIgb1ANPqduHMR8d2E7p9XYLFV1TYHBqoE8uIq0gOtFVvcXuAATbN8WuKTE+c7pg==
+eagle.js@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/eagle.js/-/eagle.js-0.6.0.tgz#dea56cf97fca0976360d32795a8def969dd09ed7"
+  integrity sha512-UXgE1Sye2NubbmxweImwhZE4/jRXbfpXS+d5GeSbarIN2MtEkHwleRaey/xEDSKw91JXMJ3fXcVYuYMoQ6m8Pw==
   dependencies:
     lodash.throttle "^4.1.1"
 

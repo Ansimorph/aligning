@@ -12,7 +12,7 @@ body {
     animation-duration: 0.2s;
 }
 
-.eg-slideshow,
+.slideshow,
 .eg-slide {
     height: 100%;
     overflow: hidden;
@@ -20,7 +20,7 @@ body {
     position: absolute;
 }
 
-.eg-slideshow {
+.slideshow {
     background-color: $black;
     font-family: "IBM Plex Serif", Helvetica, sans-serif;
     color: $white;

@@ -1,7 +1,8 @@
 <template>
   <div class="pong">
-    <h1 class="headline">What's keeping
-      <br>us apart?
+    <h1 class="headline">
+      What's keeping
+      <br />us apart?
     </h1>
     <div class="net"></div>
     <div class="subheadline">
@@ -61,7 +62,7 @@ export default {
   methods: {
     init() {
       const slideDimensions = document
-        .getElementsByClassName("eg-slideshow")[0]
+        .getElementsByClassName("slideshow")[0]
         .getBoundingClientRect();
 
       const padLeftDimensions = document

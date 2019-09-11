@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="eg-slideshow">
+    <div class="slideshow">
       <slide leave="fadeOut">
         <title-slide></title-slide>
       </slide>
@@ -27,7 +27,7 @@
             <h1 class="solitary-headline margin-medium">A better Jira?</h1>
             <p class="h2size" v-if="step >= 2">No</p>
           </div>
-          <img class="jira-image" src="./assets/images/jira.png">
+          <img class="jira-image" src="./assets/images/jira.png" />
         </div>
       </slide>
       <slide :steps="2" leave="fadeOut">
@@ -36,7 +36,7 @@
             <h1 class="solitary-headline margin-medium">A better Photoshop?</h1>
             <p class="h2size" v-if="step >= 2">Maybe</p>
           </div>
-          <img class="photoshop-image" src="./assets/images/photoshop.png">
+          <img class="photoshop-image" src="./assets/images/photoshop.png" />
         </div>
       </slide>
       <!-- <slide leave='fadeOut'>
@@ -52,7 +52,7 @@
               v-if="step >= 2"
             >Only if they establish a common language for designers and developers</p>
           </div>
-          <img class="ds-image" src="./assets/images/designsystem.png">
+          <img class="ds-image" src="./assets/images/designsystem.png" />
         </div>
       </slide>
       <slide leave="fadeOut">
@@ -126,7 +126,7 @@ export default {
   mounted: function() {
     window.addEventListener("keydown", this.extraKeyboardNav);
 
-    const hammer = new Hammer(document.querySelector(".eg-slideshow"));
+    const hammer = new Hammer(document.querySelector(".slideshow"));
     hammer.on("swiperight", () => {
       this.previousStep();
     });
@@ -135,9 +135,13 @@ export default {
     });
   },
   methods: {
-    // Also allow for naviagtion with up/down so that my presenter works
+    // Also allow for navigation with up/down/Enter so that my presenter works
     extraKeyboardNav: function(event) {
-      if (event.key === "ArrowUp") {
+      if (
+        event.key === "ArrowUp" ||
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
         this.nextStep();
         event.preventDefault();
       } else if (event.key === "ArrowDown") {

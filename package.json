@@ -3,13 +3,14 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "start": "vue-cli-service serve",
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
         "animate.css": "^3.7.0",
-        "eagle.js": "^0.4.0",
+        "eagle.js": "^0.6.0",
         "hammerjs": "^2.0.8",
         "node-sass": "^4.9.4",
         "prismjs": "^1.15.0",
