@@ -1,52 +1,52 @@
 {
-    "name": "slides",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "start": "vue-cli-service serve",
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+  "name": "slides",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "eagle.js": "^0.6.0",
+    "hammerjs": "^2.0.8",
+    "node-sass": "^4.9.4",
+    "prismjs": "^1.15.0",
+    "vue": "^2.5.17",
+    "vue-prism-component": "^1.1.1",
+    "vue-resize-directive": "^1.1.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
     },
-    "dependencies": {
-        "animate.css": "^3.7.0",
-        "eagle.js": "^0.6.0",
-        "hammerjs": "^2.0.8",
-        "node-sass": "^4.9.4",
-        "prismjs": "^1.15.0",
-        "vue": "^2.5.17",
-        "vue-prism-component": "^1.1.1",
-        "vue-resize-directive": "^1.1.4"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.3",
-        "@vue/cli-plugin-eslint": "^3.0.3",
-        "@vue/cli-service": "^3.0.3",
-        "sass-loader": "^7.1.0",
-        "vue-template-compiler": "^2.5.17"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/essential",
-            "eslint:recommended"
-        ],
-        "rules": {},
-        "parserOptions": {
-            "parser": "babel-eslint"
-        }
-    },
-    "postcss": {
-        "plugins": {
-            "autoprefixer": {}
-        }
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ]
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }

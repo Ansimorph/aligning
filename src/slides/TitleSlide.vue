@@ -8,7 +8,7 @@
         id="left"
         name="align"
         class="visually-hidden icons__input"
-      >
+      />
       <label class="icons__item" for="left"></label>
       <input
         type="radio"
@@ -17,7 +17,7 @@
         id="center"
         name="align"
         class="visually-hidden icons__input"
-      >
+      />
       <label class="icons__item" for="center"></label>
       <input
         type="radio"
@@ -26,7 +26,7 @@
         id="right"
         name="align"
         class="visually-hidden icons__input"
-      >
+      />
       <label class="icons__item" for="right"></label>
       <input
         type="radio"
@@ -35,12 +35,13 @@
         id="justify"
         name="align"
         class="visually-hidden icons__input"
-      >
+      />
       <label class="icons__item" for="justify"></label>
     </div>
     <h1>Aligning Development & Design</h1>
-    <div class="author">Björn Ganslandt
-      <br>
+    <div class="author">
+      Björn Ganslandt
+      <br />
       <a href="https://twitter.com/Ansimorph">@ansimorph</a>
     </div>
   </div>
