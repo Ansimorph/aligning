@@ -42,7 +42,7 @@
     <div class="author">
       Björn Ganslandt
       <br />
-      <a href="https://twitter.com/Ansimorph">@ansimorph</a>
+      <a href="https://front-end.social/@Ansimorph">@ansimorph</a>
     </div>
   </div>
 </template>

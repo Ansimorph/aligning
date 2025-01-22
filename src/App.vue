@@ -87,9 +87,9 @@
       </slide>
       <slide leave="fadeOut">
         <div class="credits">
-          <p class="h2size margin-small">Follow Me On Twitter:</p>
+          <p class="h2size margin-small">Follow Me On Mastodon:</p>
           <p class="margin-large">
-            <a class="h3size" href="https://twitter.com/Ansimorph">@ansimorph</a>
+            <a class="h3size" href="https://front-end.social/@Ansimorph">@ansimorph</a>
           </p>
           <p class="h2size margin-small">Get the slides:</p>
           <a
